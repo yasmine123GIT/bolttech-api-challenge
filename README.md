@@ -27,15 +27,15 @@ curl -X POST http://localhost:5000/api/login \
 
 Get all employees:
 curl -X GET http://localhost:5000/api/employees/all \
-  -H "accessToken: 732935fe39094ac085d6a1b883965d7e"
+  -H "accessToken: "
 
 2)Return specific employee
 curl -X GET "http://localhost:5000/api/employees/1 \
-     -H "accessToken: 732935fe39094ac085d6a1b883965d7e"
+     -H "accessToken: "
 
 3)create a specific employee
 curl -X POST "http://localhost:5000/api/employees" \
-     -H "accessToken: 732935fe39094ac085d6a1b883965d7e" \
+     -H "accessToken: " \
      -H "Content-Type: application/json" \
      -d '[{
            "firstname": "Yasmine",
@@ -46,7 +46,7 @@ curl -X POST "http://localhost:5000/api/employees" \
 4)update specific employee
 PATCH (Partial Update):
 curl -X PATCH http://localhost:5000/api/employees/1 \
-  -H "accessToken: 732935fe39094ac085d6a1b883965d7e" \
+  -H "accessToken: " \
   -H "Content-Type: application/json" \
   -d '{
         "firstname": "Yasmine_Updated",
@@ -58,7 +58,7 @@ curl -X PATCH http://localhost:5000/api/employees/1 \
 
 PUT (Full Update):
 curl -X PUT http://localhost:5000/api/employees/1 \
-  -H "accessToken: 732935fe39094ac085d6a1b883965d7e" \
+  -H "accessToken: " \
   -H "Content-Type: application/json" \
   -d '{
         "firstname": "Yasmine_Updated",
@@ -69,7 +69,7 @@ curl -X PUT http://localhost:5000/api/employees/1 \
 
 5)
 curl -X DELETE http://localhost:5000/api/employees/1 \
-  -H "accessToken: 732935fe39094ac085d6a1b883965d7e" \
+  -H "accessToken: " \
   -H "Content-Type: application/json" \
   -d '{
         "id": 1
@@ -77,4 +77,4 @@ curl -X DELETE http://localhost:5000/api/employees/1 \
 
 6)
 curl -X GET http://localhost:5000/api/employees/1 \
-  -H "accessToken: 6b3d63fd145e4fc0bc4a177077b58199"
+  -H "accessToken: "
